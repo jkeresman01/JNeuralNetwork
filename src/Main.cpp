@@ -2,7 +2,6 @@
 
 #include "Math/Matrix.h"
 
-
 int main()
 {
     jnetwork::Matrix originalMatrix(2, 3);
@@ -19,8 +18,6 @@ int main()
 
     std::shared_ptr<jnetwork::Matrix> transposedMatrix = originalMatrix.Transpose();
 
-	std::cout << "Transposed matrix" << std::endl;
+    std::cout << "Transposed matrix" << std::endl;
     std::cout << transposedMatrix->ToString() << std::endl;
-
-
 }

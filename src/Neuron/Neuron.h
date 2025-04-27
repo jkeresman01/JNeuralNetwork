@@ -8,18 +8,18 @@ namespace jnetwork
 class Neuron
 {
   public:
-      explicit Neuron(const double value);
+    explicit Neuron(const double value);
 
-      void Activate();
-      void Derive();
+    void Activate();
+    void Derive();
 
-      void SetValue(const double value);
+    void SetValue(const double value);
 
-      double GetValue() const { return m_Value; }
-      double GetActivatedValue() const { return m_ActivatedValue; }
-      double GetDerivedValue() const { return m_DerivedValue; }
+    double GetValue() const { return m_Value; }
+    double GetActivatedValue() const { return m_ActivatedValue; }
+    double GetDerivedValue() const { return m_DerivedValue; }
 
-      std::string ToString() const;
+    std::string ToString() const;
 
   private:
     double m_Value;
@@ -27,4 +27,4 @@ class Neuron
     double m_DerivedValue;
 };
 
-}
+} // namespace jnetwork

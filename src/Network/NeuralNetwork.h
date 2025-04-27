@@ -2,11 +2,9 @@
 
 namespace jnetwork
 {
-	class NeuralNetowrk
-	{
-      public:
-
-      private:
-
-	};
-}
+class NeuralNetowrk
+{
+  public:
+  private:
+};
+} // namespace jnetwork

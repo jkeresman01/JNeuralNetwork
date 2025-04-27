@@ -2,13 +2,13 @@
 
 #include <sstream>
 
-#include "../Utils/RandomUtil.h"
 #include "../Common/Logger.h"
+#include "../Utils/RandomUtil.h"
 
 namespace jnetwork
 {
 
-Matrix::Matrix(const uint32_t rowsCount, const uint32_t columnsCount) 
+Matrix::Matrix(const uint32_t rowsCount, const uint32_t columnsCount)
     : m_RowsCount(rowsCount), m_ColumnsCount(columnsCount)
 {
     JNETWORK_INFO(TEXT("Initializing Matrix with size %d x %d", rowsCount, columnsCount));
@@ -58,7 +58,7 @@ std::shared_ptr<Matrix> Matrix::Transpose()
     return transposedMatrix;
 }
 
-void Matrix::SetValue(const uint32_t rowsCount, const uint32_t columnsCount, const double value) 
+void Matrix::SetValue(const uint32_t rowsCount, const uint32_t columnsCount, const double value)
 {
     if (rowsCount >= m_RowsCount || columnsCount >= m_ColumnsCount)
     {

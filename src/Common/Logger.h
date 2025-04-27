@@ -77,4 +77,4 @@ class Logger
     }
 };
 
-} // namespace jnetowrk
+} // namespace jnetwork

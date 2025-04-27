@@ -11,12 +11,12 @@ Neuron::Neuron(const double value)
     SetValue(value);
 }
 
-void Neuron::Activate() 
+void Neuron::Activate()
 {
     m_ActivatedValue = m_Value / (1 + abs(m_Value));
 }
 
-void Neuron::Derive() 
+void Neuron::Derive()
 {
     m_DerivedValue = m_ActivatedValue * (1 - m_ActivatedValue);
 }
@@ -25,7 +25,7 @@ void Neuron::SetValue(const double value)
 {
     m_Value = value;
 
-	Activate();
+    Activate();
     Derive();
 }
 
