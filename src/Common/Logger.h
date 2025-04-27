@@ -24,14 +24,14 @@
         return std::string(buffer);                                                                          \
     }(format, __VA_ARGS__)
 
-#define LOG(severity, message) emulator6502::Logger::log(severity, message, __FILE__, __LINE__)
+#define LOG(severity, message) jnetwork::Logger::log(severity, message, __FILE__, __LINE__)
 
 #define JNETWORK_DEBUG(message) LOG("DEBUG", message)
 #define JNETWORK_INFO(message) LOG("INFO", message)
 #define JNETWORK_WARN(message) LOG("WARN", message)
 #define JENTWORK_ERROR(message) LOG("ERROR", message)
 
-namespace emulator6502
+namespace jnetwork
 {
 
 class Logger
@@ -42,7 +42,7 @@ class Logger
     static void log(const std::string &severity, const std::string &message, const char *file,
                     uint32_t lineNumber)
     {
-        std::ofstream logfile("C:\\Users\\josip\\aaaaa\\JNeuralNetwork\\log.txt", std::ios::app);
+        std::ofstream logfile("C:\\Users\\josip\\Desktop\\JNeuralNetwork\\log.txt", std::ios::app);
 
         if (!logfile.is_open())
         {
@@ -77,4 +77,4 @@ class Logger
     }
 };
 
-} // namespace emulator6502
+} // namespace jnetowrk
