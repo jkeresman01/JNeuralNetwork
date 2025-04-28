@@ -58,30 +58,30 @@ std::shared_ptr<Matrix> Matrix::Transpose()
     return transposedMatrix;
 }
 
-void Matrix::SetValue(const uint32_t rowsCount, const uint32_t columnsCount, const double value)
+void Matrix::SetValue(const uint32_t row, const uint32_t column, const double value)
 {
-    if (rowsCount >= m_RowsCount || columnsCount >= m_ColumnsCount)
+    if (row >= m_RowsCount || column >= m_ColumnsCount)
     {
         JENTWORK_ERROR(
-            TEXT("Invalid index (%d, %d) for SetValue: Index out of bounds", rowsCount, columnsCount));
+            TEXT("Invalid index (%d, %d) for SetValue: Index out of bounds", row, column));
         return;
     }
 
-    JNETWORK_DEBUG(TEXT("Setting value at (%d, %d) to %f", rowsCount, columnsCount, value));
-    m_Values[rowsCount][columnsCount] = value;
+    JNETWORK_DEBUG(TEXT("Setting value at (%d, %d) to %f", row, column, value));
+    m_Values[row][column] = value;
 }
 
-double Matrix::GetValue(const uint32_t rowsCount, const uint32_t columnsCount) const
+double Matrix::GetValue(const uint32_t row, const uint32_t column) const
 {
-    if (rowsCount >= m_RowsCount || columnsCount >= m_ColumnsCount)
+    if (row >= m_RowsCount || column >= m_ColumnsCount)
     {
         JENTWORK_ERROR(
-            TEXT("Invalid index (%d, %d) for GetValue: Index out of bounds", rowsCount, columnsCount));
+            TEXT("Invalid index (%d, %d) for GetValue: Index out of bounds", row, column));
         return 0.0f;
     }
 
-    JNETWORK_DEBUG(TEXT("Getting value at (%d, %d)", rowsCount, columnsCount));
-    return m_Values[rowsCount][columnsCount];
+    JNETWORK_DEBUG(TEXT("Getting value at (%d, %d)", row, column));
+    return m_Values[row][column];
 }
 
 std::string Matrix::ToString() const
