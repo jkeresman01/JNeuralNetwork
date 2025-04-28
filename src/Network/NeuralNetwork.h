@@ -1,12 +1,12 @@
 #pragma once
 
-#include <vector>
 #include <memory>
 #include <string>
+#include <vector>
 
+#include "../Layer/Layer.h"
 #include "../Math/Matrix.h"
 #include "../Neuron/Neuron.h"
-#include "../Layer/Layer.h"
 
 namespace jnetwork
 {

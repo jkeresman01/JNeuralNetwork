@@ -2,8 +2,10 @@
 
 namespace jnetwork
 {
-NeuralNetwork::NeuralNetwork(const std::vector<uint32_t> &topology) 
-    : m_Topology(topology), m_TopologySize(topology.size()) {}
+NeuralNetwork::NeuralNetwork(const std::vector<uint32_t> &topology)
+    : m_Topology(topology), m_TopologySize(topology.size())
+{
+}
 
 void NeuralNetwork::InitLayers()
 {
@@ -15,9 +17,9 @@ void NeuralNetwork::InitLayers()
     }
 }
 
-void NeuralNetwork::InitMatrices() 
+void NeuralNetwork::InitMatrices()
 {
-	m_Matrices.reserve(m_TopologySize);
+    m_Matrices.reserve(m_TopologySize);
 
     for (size_t i = 0; i < m_TopologySize - 1; ++i)
     {
@@ -26,12 +28,11 @@ void NeuralNetwork::InitMatrices()
 
         m_Matrices.emplace_back(matrix);
     }
-
 }
 
 std::string NeuralNetwork::ToString() const
 {
-    //TODO
+    // TODO
     return std::string();
 }
 

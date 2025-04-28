@@ -62,8 +62,7 @@ void Matrix::SetValue(const size_t row, const size_t column, const double value)
 {
     if (row >= m_RowsCount || column >= m_ColumnsCount)
     {
-        JENTWORK_ERROR(
-            TEXT("Invalid index (%d, %d) for SetValue: Index out of bounds", row, column));
+        JENTWORK_ERROR(TEXT("Invalid index (%d, %d) for SetValue: Index out of bounds", row, column));
         return;
     }
 
@@ -75,8 +74,7 @@ double Matrix::GetValue(const size_t row, const size_t column) const
 {
     if (row >= m_RowsCount || column >= m_ColumnsCount)
     {
-        JENTWORK_ERROR(
-            TEXT("Invalid index (%d, %d) for GetValue: Index out of bounds", row, column));
+        JENTWORK_ERROR(TEXT("Invalid index (%d, %d) for GetValue: Index out of bounds", row, column));
         return 0.0f;
     }
 
