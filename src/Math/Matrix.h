@@ -10,17 +10,17 @@ namespace jnetwork
 class Matrix
 {
   public:
-    Matrix(const uint32_t rowsCount, const uint32_t columnsCount);
+    Matrix(const size_t rowsCount, const size_t columnsCount);
 
     std::shared_ptr<Matrix> Transpose();
 
-    void SetValue(const uint32_t rowsCount, const uint32_t columnsCount, const double value);
-    double GetValue(const uint32_t rowsCount, const uint32_t columnsCount) const;
+    void SetValue(const size_t rowsCount, const size_t columnsCount, const double value);
+    double GetValue(const size_t rowsCount, const size_t columnsCount) const;
 
     void SetRandom(bool isRandom) { m_IsRandom = isRandom; }
 
-    uint32_t GetColumnsCount() const { return m_ColumnsCount; }
-    uint32_t GetRowsCount() const { return m_RowsCount; }
+    size_t GetColumnsCount() const { return m_ColumnsCount; }
+    size_t GetRowsCount() const { return m_RowsCount; }
 
     bool IsRandom() const { return m_IsRandom; }
 
@@ -30,10 +30,10 @@ class Matrix
     void InitMatrix();
 
   private:
-    uint32_t m_RowsCount;
-    uint32_t m_ColumnsCount;
-    bool m_IsRandom = false;
+    size_t m_RowsCount;
+    size_t m_ColumnsCount;
 
+    bool m_IsRandom = false;
     std::vector<std::vector<double>> m_Values;
 };
 } // namespace jnetwork

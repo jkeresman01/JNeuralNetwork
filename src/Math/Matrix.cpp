@@ -8,7 +8,7 @@
 namespace jnetwork
 {
 
-Matrix::Matrix(const uint32_t rowsCount, const uint32_t columnsCount)
+Matrix::Matrix(const size_t rowsCount, const size_t columnsCount)
     : m_RowsCount(rowsCount), m_ColumnsCount(columnsCount)
 {
     JNETWORK_INFO(TEXT("Initializing Matrix with size %d x %d", rowsCount, columnsCount));
@@ -58,7 +58,7 @@ std::shared_ptr<Matrix> Matrix::Transpose()
     return transposedMatrix;
 }
 
-void Matrix::SetValue(const uint32_t row, const uint32_t column, const double value)
+void Matrix::SetValue(const size_t row, const size_t column, const double value)
 {
     if (row >= m_RowsCount || column >= m_ColumnsCount)
     {
@@ -71,7 +71,7 @@ void Matrix::SetValue(const uint32_t row, const uint32_t column, const double va
     m_Values[row][column] = value;
 }
 
-double Matrix::GetValue(const uint32_t row, const uint32_t column) const
+double Matrix::GetValue(const size_t row, const size_t column) const
 {
     if (row >= m_RowsCount || column >= m_ColumnsCount)
     {

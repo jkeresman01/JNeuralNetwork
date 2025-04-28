@@ -23,15 +23,15 @@ add_executable(
     "src/Math/Matrix.cpp" 
     "src/Utils/RandomUtil.h" 
     "src/Utils/RandomUtil.cpp" 
-    "src/Network/NeuralNetwork.h" 
-    "src/Network/NeuralNetowrk.cpp" 
     "src/Common/Assert.h"
+    "src/Network/NeuralNetwork.h" 
+    "src/Network/NeuralNetwork.cpp"
 )
 
 enable_testing()
 
 file(GLOB TEST_SOURCES "test/*.cpp")
-add_executable(JNeuralNetworkTests ${TEST_SOURCES} "src/Math/Matrix.cpp" "src/Utils/RandomUtil.cpp" "src/Neuron/Neuron.cpp")
+add_executable(JNeuralNetworkTests ${TEST_SOURCES} "src/Math/Matrix.cpp" "src/Utils/RandomUtil.cpp" "src/Neuron/Neuron.cpp" "src/Network/NeuralNetwork.cpp")
 target_link_libraries(JNeuralNetworkTests gtest gtest_main)
 add_test(NAME AllTests COMMAND JNeuralNetworkTests)
 
