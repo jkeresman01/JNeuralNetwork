@@ -49,7 +49,7 @@ std::shared_ptr<Matrix> Matrix::Transpose()
     {
         for (size_t j = 0; j < m_ColumnsCount; ++j)
         {
-            transposedMatrix->m_Values[j][i] = m_Values[i][j];
+            transposedMatrix->SetValue(j, i, m_Values[i][j]);
         }
     }
 
