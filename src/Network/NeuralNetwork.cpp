@@ -5,6 +5,8 @@ namespace jnetwork
 NeuralNetwork::NeuralNetwork(const std::vector<uint32_t> &topology)
     : m_Topology(topology), m_TopologySize(topology.size())
 {
+    InitLayers();
+    InitMatrices();
 }
 
 void NeuralNetwork::InitLayers()
