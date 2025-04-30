@@ -2,7 +2,7 @@
 
 namespace jnetwork
 {
-Layer::Layer(const uint32_t size) : m_Size(size)
+Layer::Layer(const size_t size) : m_Size(size)
 {
     m_Neurons.reserve(size);
 
